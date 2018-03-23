@@ -16,6 +16,11 @@ function addItem() {
     var currentItem = itemInput.value;
     var listItem = document.createElement("li");
 
-    return "i hate this class";
+
+    document.getElementById("li") = currentItem;
+    list.appendChild(listItem);
+    itemInput.value = "";
+
+
 
 }
