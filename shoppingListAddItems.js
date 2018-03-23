@@ -1,4 +1,4 @@
- var submitButton = document.getElementById('submit')
+ var submitButton = document.getElementById('submit');
  submitButton.addEventListener("click", () => {
      document.getElementById('list').textContent = addItem();
  });
@@ -11,7 +11,7 @@
  function addItem() {
      var itm = document.getElementById('item');
      var addItm = document.createElement('list');
-     addItm.textContent = ('item')
+     addItm.textContent = ('item');
  }
 
 
