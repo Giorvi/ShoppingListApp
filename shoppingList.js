@@ -10,7 +10,6 @@ function addItem() {
     var li = document.createElement("li");
     var textcontent = document.createElement("empty");
     var deletebutton = document.createElement("button");
-    var clearbutton = document.getElementById("clear");
 
     document.getElementById("item").value = ""
 
