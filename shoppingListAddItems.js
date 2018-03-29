@@ -1,18 +1,14 @@
  var submitButton = document.getElementById('submit');
- submitButton.addEventListener("click", () => {
-     document.getElementById('').textContent = addItem();
- });
+ submitButton.addEventListener("click", addItem);
 
-function addItem() {
-    var itemInput = document.getElementById("item");
-    var newItem = document.createElement("li");
-    var itemcontent = document.createTextNode(itemInput);
+function addItem(){
 
-    newItem.appendChild(itemcontent);
+    var input = document.getElementById("item").value;
+    var li = document.createElement("li");
 
-    var currentItem = document.getElementById("item");
-    document.body.insertBefore(newItem, currentItem);
+    li.textContent = input;
 
+    return document.getElementById("list").appendChild(li);
 
 }
 
