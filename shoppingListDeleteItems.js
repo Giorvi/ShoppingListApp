@@ -1,26 +1,31 @@
-var button = document.getElementById('submit');
+var button = document.getElementById("submit");
 button.addEventListener("click", () => {
-    document.getElementById("list").textContent = addItem();
+    addandsubtract();
 });
-//var itemInput = document.getElementById("item");
-//var clear = document.getElementById("clear");
-//var submit = document.getElementById("submit");
-// var list = document.getElementById("list");
 
+var list = document.getElementsByTagName("ul")[0];
 
-function addItem() {
-    var itemInput = document.getElementById("item");
-    var clear = document.getElementById("clear");
-    var submit = document.getElementById("submit");
-    var list = document.getElementById("list");
-    var currentItem = itemInput.value;
-    var listItem = document.createElement("li");
+function addandsubtract() {
+    var input = document.getElementById("item").value;
+    var li = document.createElement("li");
+    var txtcontent = document.createElement("span");
+    var deleteb = document.createElement("button");
 
+    document.getElementById("item").value = ""
 
-    document.getElementById("li") = currentItem;
-    list.appendChild(listItem);
-    itemInput.value = "";
+    deleteb.textContent = "remove";
+    deleteb.className = "delete"
 
+    deleteb.addEventListener("click", () => {
+        var removeb = deleteb.parentElement;
+        removeb.remove();
+    });
 
+    txtcontent.textContent = input;
+
+    li.appendChild(txtcontent);
+    li.appendChild(deleteb);
+
+    list.appendChild(li);
 
 }
