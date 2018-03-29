@@ -1,30 +1,30 @@
-var submitButton = document.getElementById('submit');
+var submitbutton = document.getElementById("submit");
 button.addEventListener("click", () => {
     addItem();
 });
 
+var list = document.getElementsByTagName("ul")[0];
+
 function addItem() {
-    var deletebutton = document.createElement('button'),
-        input = document.getElementById("input").value,
-        li = document.createElement("li");
+    var input = document.getElementById("item").value;
+    var li = document.createElement("li");
+    var textcontent = document.createElement("empty");
+    var deletebutton = document.createElement("button");
+    var clearbutton = document.getElementById("clear");
 
-    //     document.getElementById("input").value = "";
+    document.getElementById("item").value = ""
 
-    li.textContent = input;
-    return document.getElementById("list").appendChild(li);
+    deletebutton.textContent = "Remove Item";
+    deletebutton.className = "delete"
 
+    deletebutton.addEventListener("click", () => {
+        var target = deletebutton.parentElement;
+        target.remove();
+    });
 
-    /*  deletebutton.textContent = "Delete";
-      deletebutton.className = "delete"
+    textcontent.textContent = input;
 
-      deletebutton.addEventListener("click", () => {
-         var target = deletebutton.parentElement;
-         target.remove();
-     });*/
-
-    content.textContent = input + " ";
-
-    li.appendChild(content);
+    li.appendChild(textcontent);
     li.appendChild(deletebutton);
 
     list.appendChild(li);
