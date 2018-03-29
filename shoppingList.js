@@ -1,5 +1,5 @@
 var submitbutton = document.getElementById("submit");
-button.addEventListener("click", () => {
+submitbutton.addEventListener("click", () => {
     addItem();
 });
 
@@ -21,7 +21,7 @@ function addItem() {
         target.remove();
     });
 
-    textcontent.textContent = input;
+    textcontent.textContent = input + "";
 
     li.appendChild(textcontent);
     li.appendChild(deletebutton);
