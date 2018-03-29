@@ -1,19 +1,32 @@
- var submitButton = document.getElementById('submit');
- submitButton.addEventListener("click", () => {
-     document.getElementById('').textContent = addItem();
- });
+var submitButton = document.getElementById('submit');
+button.addEventListener("click", () => {
+    addItem();
+});
 
 function addItem() {
-    var itemInput = document.getElementById("item");
-    var newItem = document.createElement("li");
-    var itemcontent = document.createTextNode(itemInput);
+    var deletebutton = document.createElement('button'),
+        input = document.getElementById("input").value,
+        li = document.createElement("li");
 
-    newItem.appendChild(itemcontent);
+    //     document.getElementById("input").value = "";
 
-    var currentItem = document.getElementById("item");
-    document.body.insertBefore(newItem, currentItem);
+    li.textContent = input;
+    return document.getElementById("list").appendChild(li);
 
+
+    /*  deletebutton.textContent = "Delete";
+      deletebutton.className = "delete"
+
+      deletebutton.addEventListener("click", () => {
+         var target = deletebutton.parentElement;
+         target.remove();
+     });*/
+
+    content.textContent = input + " ";
+
+    li.appendChild(content);
+    li.appendChild(deletebutton);
+
+    list.appendChild(li);
 
 }
-
-
